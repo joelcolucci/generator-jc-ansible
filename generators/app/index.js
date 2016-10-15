@@ -41,9 +41,25 @@ module.exports = yeoman.Base.extend({
       this.destinationPath('production')
     );
 
+    // Copy Ansible playbook template files
+    this.fs.copy(
+      this.templatePath('site.yml'),
+      this.destinationPath('site.yml')
+    );
+
+    this.fs.copy(
+      this.templatePath('webservers.yml'),
+      this.destinationPath('webservers.yml')
+    );
+
+    this.fs.copy(
+      this.templatePath('dbservers.yml'),
+      this.destinationPath('dbservers.yml')
+    );
+
   },
 
   install: function () {
-    this.installDependencies();
+
   }
 });
