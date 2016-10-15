@@ -1,0 +1,36 @@
+{
+  "name": "generator-jc-ansible",
+  "version": "0.0.0",
+  "description": "Quickly scaffold Ansible configurations",
+  "homepage": "https://github.com/joelcolucci/generator-jc-ansible",
+  "author": {
+    "name": "Joel Colucci",
+    "email": "joelcolucci@gmail.com",
+    "url": "joelcolucci.com"
+  },
+  "files": [
+    "generators"
+  ],
+  "main": "generators/index.js",
+  "keywords": [
+    "ansible",
+    "generator",
+    "devops",
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "yeoman-generator": "^0.23.0",
+    "chalk": "^1.0.0",
+    "yosay": "^1.0.0"
+  },
+  "devDependencies": {
+    "yeoman-test": "^1.0.0",
+    "yeoman-assert": "^2.0.0",
+    "mocha": "^3.1.0"
+  },
+  "repository": "joelcolucci/generator-jc-ansible",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha ./tests/**/*.js"
+  },
+  "license": "MIT"
+}
