@@ -24,10 +24,23 @@ module.exports = yeoman.Base.extend({
   },
 
   writing: function () {
+
+    // Copy Ansible host template files
     this.fs.copy(
-      this.templatePath('dummyfile.txt'),
-      this.destinationPath('dummyfile.txt')
+      this.templatePath('development'),
+      this.destinationPath('development')
     );
+
+    this.fs.copy(
+      this.templatePath('staging'),
+      this.destinationPath('staging')
+    );
+
+    this.fs.copy(
+      this.templatePath('production'),
+      this.destinationPath('production')
+    );
+
   },
 
   install: function () {
